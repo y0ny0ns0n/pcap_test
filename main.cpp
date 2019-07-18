@@ -10,26 +10,26 @@ typedef struct frame_h {
     u_char dst_mac[6];
     u_char src_mac[6];
     u_short type;
-    u_char reserved2;    // Header Length
-    u_char reserved3;    // Differentiated Services Codepoint
-    u_char reserved4;    // Explicit Congestion Notification
-    u_char reserved5;    // Total Length
-    u_short reserved6;   // Identification
-    u_short reserved7;   // Flags
+    u_char reserved1;    // Header Length
+    u_char reserved2;    // Differentiated Services Codepoint
+    u_char reserved3;    // Explicit Congestion Notification
+    u_char reserved4;    // Total Length
+    u_short reserved5;   // Identification
+    u_short reserved6;   // Flags
     u_char TTL;
     u_char proto;
-    u_short reserved10;  // Header checksum
+    u_short reserved7;   // Header checksum
     u_char src_ip[4];
     u_char dst_ip[4];
     u_short src_port;
     u_short dst_port;
-    u_char reserved11[4]; // etc1
-    u_char reserved12[4]; // etc2
-    u_char reserved13;    // etc3
-    u_char reserved14;    // etc4
-    u_short reserved15;   // Window size value
-    u_short reserved16;   // Checksum
-    u_short reserved17;   // Urgent Pointer
+    u_char reserved8[4];  // etc1
+    u_char reserved9[4];  // etc2
+    u_char reserved10;    // etc3
+    u_char reserved11;    // etc4
+    u_short reserved12;   // Window size value
+    u_short reserved13;   // Checksum
+    u_short reserved14;   // Urgent Pointer
 } frame_h;
 
 int main(int argc, char* argv[]) {
